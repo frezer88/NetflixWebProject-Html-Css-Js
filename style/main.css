@@ -1,0 +1,625 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    height: 700px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/bgrndimg.jpg);
+    background-size: 100%;
+}
+
+.container{
+    margin-left: 10%; /* сделать медиа запрос, на больших экранах по другому*/
+    margin-right: 10%;
+}
+
+.header-site{
+    display: flex;
+    height: 86px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header img{
+    width: 148px;
+    height: 40px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.header-service{
+    display: flex;
+    font-family: sans-serif;
+}
+
+.choice-lang-button{
+    color: rgb(255, 255, 255);    
+    margin-right: 12px;
+    width: 131px;
+    height: 32px;
+    border: solid 1px rgb(135, 135, 135); 
+    display: flex;
+    border-radius: 5px;
+}
+
+.arrow-select svg{
+    transform: rotate(0deg);
+}
+
+.decor-planet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.decor-planet img{
+    width: 20px;
+    height: 20px;
+}
+
+.block-choice-lang{
+    position: relative;
+}
+
+.choice-lang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.select-lang{
+    color: rgba(255,255,255,1);
+    position: absolute;
+    width: 131px;
+    border: solid 1px rgb(135, 135, 135); 
+    border-radius: 5px;
+    margin-top: 5px;
+    user-select: none;
+    display: none;
+}
+
+.active-select-lang{
+    display: inline;
+}
+
+.select-lang li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.select-lang li:first-child{
+    margin-top: 5px;
+}
+
+.select-lang li:hover{
+    background-color: #0071eb;
+}
+
+.arrow-select{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    transform: rotate(0deg);
+}
+
+.button-sign button{
+    font: inherit;
+    color: rgb(255, 255, 255);    
+    margin-left: 12px;
+    width: 80px;
+    height: 34px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(229, 8, 21);
+    transition: background-color 0.2s linear;
+}
+
+.button-sign button:hover{
+    background-color: rgb(188, 0, 13);
+}
+/************************************************/
+
+.header-desc{
+    color: rgba(255,255,255,1);
+    text-align: center;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+.header-desc h1{
+    margin-top: 200px;
+    margin-bottom: 24px;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.header-desc p{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.call-user{
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.header-desc-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.input-email{
+    border: solid 1px rgba(95, 95, 95, 1);
+    border-radius: 5px;
+    width: 350px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.input-email input{
+    color: rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 25px 24px 8px 25px;
+    box-sizing: border-box;/*теперь input не выпадает за пределы input-email*/
+}
+
+.input-email input:focus{
+    outline-color:rgba(0, 0, 0, 0);
+}
+
+.input-email span{
+    color: rgb(182, 182, 182);
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    transition: 0.2s;
+    cursor: text;
+}
+
+.error-input{
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    color: rgba(235,56,66,1);
+}
+
+.error-input span{
+    margin-left: 5px;
+    color: rgba(235,56,66,1);
+    position:static;
+}
+
+.header-desc-panel-button{
+    margin-left: 8px;
+}
+
+.header-desc-panel-button button{
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: inherit;
+    background-color: rgb(229, 8, 21);
+    transition: background-color 0.2s linear;
+}
+
+.header-desc-panel-button button:hover{
+    background-color: rgb(188, 0, 13);
+}
+
+.arrow-button{
+    display: flex;
+    align-items: center;
+}
+
+/************************************************/
+.background-offer-netflix{
+    background-color: rgba(0, 0, 0, 1);
+    height: 80px;
+}
+
+.offer-netflix{
+    margin-left: 74px;
+    margin-right: 74px;
+    padding: 22px;
+    height: 100px;
+    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );
+    position: relative;
+    top: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-popcorn img{
+    width: 200px;
+    height: 130px;
+}
+
+.desc-offer-netflix{
+    color: rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+.desc-offer-netflix h3{
+    margin-bottom: 8px;
+}
+
+.desc-offer-netflix p{
+    margin-bottom: 8px;
+}
+
+.desc-offer-netflix a{
+    display: flex;
+    font-weight: 700;
+    color: rgba(68,140,240,1);
+
+}
+
+.desc-offer-netflix-arrow{
+    margin-left: 8px;
+}
+
+/************************************************/
+
+.background-smart-tv{
+    background-color: rgba(0, 0, 0, 1);
+    padding-bottom: 70px;
+}
+
+.block-smart-tv{
+    color: rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc-tv h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.desc-tv p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.decor-smart-tv img{
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+    user-select: none;
+}
+
+.decor-smart-tv{
+    display: flex;
+    position: relative;
+}
+
+.decor-smart-tv video{
+    position: absolute;
+    z-index: 5;
+    top: 95px;
+    left: 70px;
+}
+
+.dividing-line{
+    background-color: rgba(35,35,35,1);
+    width: auto;
+    height: 10px;
+    margin-top: 70px;
+}
+
+/************************************************/
+
+#second-tv{
+    top: 34px;
+    left: 43px;
+}
+
+/************************************************/
+
+.background-profile-kids{
+    background-color: rgba(0, 0, 0, 1);
+    padding-bottom: 70px;
+}
+
+.block-profile-kids{
+    color: rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.desc-profile-kids h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.desc-profile-kids p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.img-profile-kids img{
+    padding-left: 25px;
+    pointer-events: none;
+    user-select: none;
+}
+
+/************************************************/
+
+
+.background-offline-shows{
+    background-color: rgba(0, 0, 0, 1);
+
+}
+
+.block-offline-shows{
+    display: flex;
+    color:rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc-offline-shows h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.desc-offline-shows p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.decor-offline-shows{
+    position: relative;
+}
+
+.mobile-offline-shows-img img{
+    width: 600px;
+}
+
+.block-download{
+    position: absolute;
+    top: 320px;
+    left: 142px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px rgba(90,90,90,1);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.desc-download{
+    margin-right: 60px;
+}
+
+.desc-download h3{
+    font-weight: 500;
+    font-size: 0.975rem;
+}
+
+.desc-download p{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #0071eb;
+}
+
+.block-download-img{
+    width: 55px;
+    height: 75px;
+    margin-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 12px;
+}
+
+.download-icon img{
+    width: 55px;
+}
+
+/************************************************/
+
+
+.background-asked-questions{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.block-asked-questions{
+    color: rgba(255,255,255,1);
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    padding-top: 70px;
+}
+
+.block-asked-questions h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.all-cart-asked-questions{
+    list-style-type: none;
+}
+
+.all-cart-asked-questions li{
+    margin-bottom: 10px;
+}
+
+.all-cart-asked-questions li:last-child{
+    margin-bottom: 3%;
+}
+
+.cart-asked-questions{
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+}
+
+.active,
+.cart-asked-questions:hover{
+    background-color: rgb(60, 60, 60);
+    transition: background-color 0.2s linear;
+}
+
+
+.decor-asked{
+    transform: rotate(0deg);
+}
+
+.block-asked-questions p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.mail-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.desc-cart-two-asked-questions{
+    background-color: rgb(45, 45, 45);
+    margin-top: 1px;
+    padding: 0 18px;
+    max-height:0px;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
+
+.desc-cart-two-asked-questions p{
+    text-align: left;
+}
+
+.desc-cart-two-asked-questions p:last-child{
+    margin-top: 20px;
+}
+
+.desc-cart-one-asked-questions{
+    background-color: rgb(45, 45, 45);
+    margin-top: 1px;
+    padding: 0 18px;
+    max-height:0px;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
+
+.desc-cart-one-asked-questions p{
+    text-align: left;
+}
+
+/************************************************/
+
+.background-footer{
+    background-color: rgba(0, 0, 0, 1);
+    padding-bottom: 70px;
+}
+
+.block-footer{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    padding-top: 70px;
+}
+
+.heading-footer{
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.heading-footer p{
+    margin-right: 5px;
+}
+
+.heading-footer a{
+    color: rgba(255,255,255,0.7);
+}
+
+.link-footer{
+    margin-bottom: 20px;
+}
+
+.link-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-footer li{
+    margin-right: 100px;
+    width: 300px;
+    height: auto;
+    padding: 8px;
+}
+
+.link-footer a{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    width: auto;
+    height: auto;
+}
+
+@media screen and (max-width: 1200px){
+    .block-smart-tv{
+        flex-direction: column;
+    }
+
+    .desc-tv{
+        text-align: center;
+    }
+
+    .block-profile-kids{
+        flex-direction: column;
+    }
+
+    .desc-profile-kids{
+        text-align: center;
+    }
+
+    .block-offline-shows{
+        flex-direction: column;
+    }
+
+    .desc-offline-shows{
+        text-align: center;
+    }
+}
+
